@@ -1,2 +1,2 @@
-./autogen.sh --enable-static --sysconfdir=/etc --localstatedir=/var CFLAGS=-fPIC
+./autogen.sh --sysconfdir=/etc --localstatedir=/var CFLAGS=-fPIC
 make -j4
