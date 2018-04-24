@@ -57,15 +57,7 @@ DIE=0
 	DIE=1
 }
 
-have_libtool=false
-if $LIBTOOLIZE --version < /dev/null > /dev/null 2>&1 ; then
-	libtool_version=`$LIBTOOLIZE --version | sed 's/^.* \([0-9][.][0-9.]*\)[^ ]*$/\1/'`
-	case $libtool_version in
-	    1.4*|1.5*|1.6*|1.7*|2*)
-		have_libtool=true
-		;;
-	esac
-fi
+have_libtool=true
 if $have_libtool ; then : ; else
 	echo
 	echo "You must have libtool 1.4 installed to compile $PROJECT."
